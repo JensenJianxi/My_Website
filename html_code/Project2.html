@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus - Ambient Background with Clock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .tech-badge {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .screenshot {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-3 border-primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-arrow-left-circle-fill me-2"></i>
+                <span class="fw-bold">Back to Portfolio</span>
+            </a>
+            <div class="ms-auto">
+                <a href="http://focusing.wuaze.com" class="btn btn-outline-light me-2" target="_blank">
+                    <i class="bi bi-play-circle me-1"></i> Live Demo
+                </a>
+                <a href="https://github.com/JensenJianxi/Focus" class="btn btn-primary" target="_blank">
+                    <i class="bi bi-github me-1"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="project-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Focus - Ambient Background with Clock</h1>
+            <p class="lead">A Focus page with fullscreen background videos, ambient sounds, and a large clock display.</p>
+            <!-- Buttons moved to navigation bar for better visibility -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Screenshot Carousel -->
+                <div class="mb-5">
+                    <div id="focusCarousel" class="carousel slide shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#focusCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#focusCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#focusCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#focusCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#focusCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus1.png">
+                                    <img src="../images/Projects/Focus1.png" class="d-block w-100" alt="Focus App - Main Interface" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Main Interface</h5>
+                                    <p>Clean and distraction-free design with large clock display</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus2.png">
+                                    <img src="../images/Projects/Focus2.png" class="d-block w-100" alt="Ambient Sound Selection" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Ambient Sound Selection</h5>
+                                    <p>Choose from various ambient sounds to enhance focus</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus3.png">
+                                    <img src="../images/Projects/Focus3.png" class="d-block w-100" alt="Background Selection" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Background Selection</h5>
+                                    <p>Multiple beautiful backgrounds to set your perfect focus environment</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus4.png">
+                                    <img src="../images/Projects/Focus4.png" class="d-block w-100" alt="Fullscreen Mode" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Fullscreen Experience</h5>
+                                    <p>Immersive fullscreen mode for maximum focus</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus5.png">
+                                    <img src="../images/Projects/Focus5.png" class="d-block w-100" alt="Settings Panel" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Customization Options</h5>
+                                    <p>Easily adjust settings to your preference</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#focusCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#focusCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <section class="mb-5">
+                    <h2 class="mb-4">✨ Features</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-collection-play feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Fullscreen Background Videos</h5>
+                                    <p>Choose from 5 different high-quality ambient scenes to create your perfect focus environment.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-music-note-beamed feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Ambient Sound Loops</h5>
+                                    <p>Immerse yourself with our selection of ambient sounds including rain, ocean waves, piano melodies, and birdsong.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-clock feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Large Clock Display</h5>
+                                    <p>Keep track of time with our large, easy-to-read clock display that helps you stay focused.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-gear feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Customizable Settings</h5>
+                                    <p>Adjust volume, toggle fullscreen mode, and customize your experience to your preferences.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-save feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Persistent Preferences</h5>
+                                    <p>Your selected background and sound preferences are saved for your next session.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-phone feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Fully Responsive</h5>
+                                    <p>Works perfectly on all devices from desktop to mobile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How to Use -->
+                <section class="mb-5">
+                    <h2 class="mb-4">📋 How to Use</h2>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Open the app in a modern web browser (Chrome, Firefox, Edge, or Safari)</li>
+                        <li class="list-group-item">Select a background scene from the bottom panel</li>
+                        <li class="list-group-item">Choose an ambient sound to play from the sound panel</li>
+                        <li class="list-group-item">Adjust the volume using the slider to your preferred level</li>
+                        <li class="list-group-item">Click the fullscreen button for a completely immersive experience</li>
+                        <li class="list-group-item">The controls will automatically hide after 5 seconds of inactivity (move your mouse to reveal them again)</li>
+                    </ol>
+                </section>
+
+                <!-- Tech Stack -->
+                <section class="mb-5">
+                    <h2 class="mb-4">🛠️ Tech Stack</h2>
+                    <div class="mb-4">
+                        <span class="badge bg-primary bg-opacity-10 text-primary p-2 me-2 mb-2">HTML5</span>
+                        <span class="badge bg-primary bg-opacity-10 text-primary p-2 me-2 mb-2">CSS3</span>
+                        <span class="badge bg-primary bg-opacity-10 text-primary p-2 me-2 mb-2">JavaScript</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">Howler.js</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">Bootstrap 5</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">LocalStorage API</span>
+                    </div>
+                </section>
+
+                <!-- Development -->
+                <section class="mb-5">
+                    <h2 class="mb-4">💻 Development</h2>
+                    <p>This project leverages modern web technologies to create a smooth and responsive experience:</p>
+                    <ul>
+                        <li><strong>HTML5 Video</strong> for seamless fullscreen backgrounds</li>
+                        <li><strong>Howler.js</strong> for reliable audio management and cross-browser compatibility</li>
+                        <li><strong>CSS Animations</strong> for smooth transitions between backgrounds and UI elements</li>
+                        <li><strong>LocalStorage API</strong> to remember user preferences between sessions</li>
+                        <li><strong>Responsive Design</strong> that works on desktop and tablet devices</li>
+                    </ul>
+                </section>
+
+                <!-- License -->
+                <section class="mb-5">
+                    <h2 class="mb-4">📄 License</h2>
+                    <p>Feel free to use and modify for your own projects!</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 Focus - Ambient Background with Clock. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="modalImage" src="" class="img-fluid" alt="Zoomed Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Initialize image zoom functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        var modalImage = document.getElementById('modalImage');
+        
+        // Handle image clicks in carousel
+        document.querySelectorAll('[data-bs-target="#imageModal"]').forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                var imgSrc = this.getAttribute('data-img');
+                modalImage.src = imgSrc;
+                imageModal.show();
+            });
+        });
+
+        // Handle direct clicks on carousel images
+        document.querySelectorAll('.carousel-item img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                var imgSrc = this.src;
+                modalImage.src = imgSrc;
+                imageModal.show();
+            });
+        });
+    });
+    </script>
+</body>
+</html>

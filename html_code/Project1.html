@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game with 3D Flip Animations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .tech-badge {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .screenshot {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-3 border-primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-arrow-left-circle-fill me-2"></i>
+                <span class="fw-bold">Back to Portfolio</span>
+            </a>
+            <div class="ms-auto">
+                <a href="http://memorygame.wuaze.com" class="btn btn-outline-light me-2" target="_blank">
+                    <i class="bi bi-play-circle me-1"></i> Live Demo
+                </a>
+                <a href="https://github.com/JensenJianxi/Focus" class="btn btn-primary" target="_blank">
+                    <i class="bi bi-github me-1"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="project-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Memory Game with 3D Flip Animations</h1>
+            <p class="lead">A classic Memory (Concentration) card-matching game enhanced with smooth 3D flip animations, sound effects, and a timer/move counter system.</p>
+            <!-- Buttons moved to navigation bar for better visibility -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Screenshot Carousel -->
+                <div class="mb-5">
+                    <div id="gameCarousel" class="carousel slide shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Flip%20Cards.png">
+                                    <img src="../images/Projects/Flip%20Cards.png" class="d-block w-100" alt="Gameplay - Flipping Cards" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Card Flipping</h5>
+                                    <p>Experience smooth 3D card flip animations</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Hard%20mode.png">
+                                    <img src="../images/Projects/Hard%20mode.png" class="d-block w-100" alt="Hard Mode" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Multiple Difficulty Levels</h5>
+                                    <p>Challenge yourself with Easy, Medium, and Hard modes, each with increasing numbers of card pairs to match!</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Scores%20Record.png">
+                                    <img src="../images/Projects/Scores%20Record.png" class="d-block w-100" alt="Score Records" style="cursor: zoom-in;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
+                                    <h5>Score Records</h5>
+                                    <p>Track your best scores and improvements</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <section class="mb-5">
+                    <h2 class="mb-4">✨ Features</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-card-image feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Smooth 3D Animations</h5>
+                                    <p>Beautiful card flip animations using GSAP 3 for a premium feel.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-phone feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Fully Responsive</h5>
+                                    <p>Play on any device with a responsive grid layout that adapts to all screen sizes.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-trophy feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Multiple Difficulty Levels</h5>
+                                    <p>Choose from Easy, Medium, or Hard difficulty to test your memory skills.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-stopwatch feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Timer & Move Counter</h5>
+                                    <p>Track your performance with an in-game timer and move counter.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-music-note-beamed feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Immersive Audio</h5>
+                                    <p>Enjoy sound effects and haptic feedback for an engaging experience.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <i class="bi bi-trophy feature-icon"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mt-0">Leaderboard</h5>
+                                    <p>Compete for the top score with the local leaderboard system.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tech Stack -->
+                <section class="mb-5">
+                    <h2 class="mb-4">🛠️ Tech Stack</h2>
+                    <div class="mb-4">
+                        <span class="badge bg-primary bg-opacity-10 text-primary p-2 me-2 mb-2">HTML5</span>
+                        <span class="badge bg-primary bg-opacity-10 text-primary p-2 me-2 mb-2">CSS3</span>
+                        <span class="badge bg-primary bg-opacity-10 text-primary p-2 me-2 mb-2">JavaScript</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">GSAP 3</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">Tailwind CSS</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">Howler.js</span>
+                        <span class="badge bg-info bg-opacity-10 text-info p-2 me-2 mb-2">Canvas Confetti</span>
+                    </div>
+                </section>
+
+                <!-- How to Play -->
+                <section class="mb-5">
+                    <h2 class="mb-4">🎮 How to Play</h2>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Click on any card to reveal its icon</li>
+                        <li class="list-group-item">Try to find the matching pair by clicking another card</li>
+                        <li class="list-group-item">If the cards match, they stay face up</li>
+                        <li class="list-group-item">If they don't match, they flip back after a short delay</li>
+                        <li class="list-group-item">Complete the game by matching all pairs</li>
+                        <li class="list-group-item">Try to achieve the best time and fewest moves!</li>
+                    </ol>
+                </section>
+
+                <!-- Development -->
+                <section class="mb-5">
+                    <h2 class="mb-4">💻 Development</h2>
+                    <p>The project uses a simple structure:</p>
+                    <ul>
+                        <li><strong>index.html</strong> - Main structure with header, game grid, and victory modal</li>
+                        <li><strong>css/styles.css</strong> - 3D card styles and responsive design</li>
+                        <li><strong>js/game.js</strong> - Core game logic and state management</li>
+                        <li><strong>js/ui-effects.js</strong> - Animations and visual feedback</li>
+                        <li><strong>js/sounds.js</strong> - Audio management with Howler.js</li>
+                        <li><strong>assets/</strong> - Icons and sound effects</li>
+                    </ul>
+                </section>
+
+                <!-- License -->
+                <section class="mb-5">
+                    <h2 class="mb-4">📄 License</h2>
+                    <p>Feel free to use and modify for your own projects!</p>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 Memory Game. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="modalImage" src="" class="img-fluid" alt="Zoomed Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Initialize image zoom functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        var modalImage = document.getElementById('modalImage');
+        
+        // Handle image clicks in carousel
+        document.querySelectorAll('[data-bs-target="#imageModal"]').forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                var imgSrc = this.getAttribute('data-img');
+                modalImage.src = imgSrc;
+                imageModal.show();
+            });
+        });
+
+        // Handle direct clicks on carousel images
+        document.querySelectorAll('.carousel-item img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                var imgSrc = this.src;
+                modalImage.src = imgSrc;
+                imageModal.show();
+            });
+        });
+    });
+    </script>
+</body>
+</html>

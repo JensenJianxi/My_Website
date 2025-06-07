@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* 1) Blog scroll‐reveal */
+#blog article {
+    opacity: 0;
+    transform: translateY(20px);
+}
+#blog article.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 2) Project cards hover lift */
+.project-card {
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 3) Navbar link hover */
+.navbar-nav .nav-link {
+    transition: color 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #0d6efd; /* Bootstrap primary */
+}
+
+/* 4) Smooth button state change */
+.btn {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.smaller-img {
+    max-width: 200px;
+    margin: 0 auto;
+}

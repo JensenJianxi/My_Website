@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chen Jian Xi | Portfolio</title>
+
+  <!-- Bootstrap 5 CSS (Local) -->
+  <link href="../Boostrap_css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    /* Video Background Styles */
+    .z-index-1 {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Ensure the video container takes full viewport height */
+    #hero {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Video background styling */
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    /* Ensure the video covers the entire container */
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 3rem !important;
+      }
+      #hero p {
+        font-size: 1.1rem !important;
+      }
+    }
+
+    /* Navigation Styles */
+    .nav-jenx {
+      font-size: 1.8rem !important;
+      font-weight: 700;
+      margin-right: 1rem;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .nav-link {
+      font-size: 1.2rem !important;
+      padding: 0.5rem 1.2rem !important;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      transform: translateY(-2px);
+    }
+    
+    .navbar-nav {
+      gap: 0.5rem;
+    }
+
+    /* Style for the language switcher */
+    .gtranslate_wrapper {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin-right: 1rem;
+    }
+    
+    /* Adjust navbar padding and height */
+    #mainNavbar {
+      min-height: 90px; /* Increased navbar height */
+      font-size: 1.1rem; /* Slightly larger font size */
+    }
+    
+    /* Adjust navbar container and items alignment */
+    #mainNavbar > .container {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 5px;  /* Reduced from 15px to 5px to lift the navbar */
+    }
+    
+    /* Adjust navbar items vertical alignment */
+    .navbar-nav {
+      align-items: center;
+      height: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: auto; /* Push the nav items to the left */
+    }
+    
+    /* Position the search form 200px from the right */
+    #mainNavbar .d-flex[role="search"] {
+      position: absolute;
+      right: 180px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+    
+    /* Ensure nav links are properly aligned */
+    .nav-link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 1.2rem; /* Increased horizontal padding */
+      font-size: 1.1rem; /* Slightly larger font size */
+    }
+    
+    /* Make the JenX text larger */
+    .nav-jenx {
+      font-size: 1.4rem !important; /* Larger JenX text */
+    }
+    
+    /* Adjust search bar size */
+    #mainNavbar .form-control {
+      font-size: 1.1rem; /* Larger search text */
+      height: 2.4rem; /* Taller search bar */
+    }
+    
+    /* Adjust search button size */
+    #mainNavbar .btn {
+      height: 2.4rem; /* Match search bar height */
+      padding: 0 1rem;
+    }
+    
+    /* Keep each section padded */
+    section {
+      padding: 4rem 0;
+    }
+    html {
+      scroll-behavior: smooth; /* enables smooth scrolling to anchors */
+    }
+    /* Since the header is fixed, give a spacer */
+    #header-spacer {
+      height: 15px;
+    }
+    /* “JenX” next to Home: larger font and bold */
+    .nav-jenx {
+      font-family: clarendon-w01-medium-692107, clarendon-w02-medium-693834, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-right: 0.5rem;
+      color: inherit;           /* inherit link color */
+      text-decoration: none;    /* remove underline */
+    }
+    .nav-jenx:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================
+       Animated Gradient Background Utility Class
+       ============================================ */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .bg-animated {
+      /* Make the section at least 60% of the viewport height */
+      min-height: 60vh;
+
+      /* Center its contents vertically */
+      display: flex;
+      align-items: center;
+      
+      /* Background color */
+      background-color: #5fb4f4;
+      background-size: cover;
+      background-position: center;
+
+      /* Ensure text remains white */
+      color: #fff !important;
+    }
+  </style>
+</head>
+
+<body
+        class="d-flex flex-column min-vh-100"
+        data-bs-spy="scroll"
+        data-bs-target="#mainNavbar"
+        data-bs-offset="75"
+>
+<!-- ============================================
+     1. HEADER (Top Branding Bar + Fixed Navbar)
+     ============================================ -->
+<header>
+
+  <!-- Bottom Navigation Bar (fixed-top) -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <!-- Navbar toggler for mobile -->
+      <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <!-- Left-aligned menu items -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-jenx" href="#hero">JenX</a>
+            <a class="nav-link active" aria-current="page" href="#hero">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html_code/About.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html_code/blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        
+        <!-- Language switcher -->
+        <div class="gtranslate_wrapper"></div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer so the fixed-top navbar does not overlap content -->
+<div id="header-spacer"></div>
+
+<!-- =================================================
+     2. INTRODUCTION SECTION (Hero)
+     ================================================= -->
+<section id="hero" class="min-vh-100 d-flex align-items-center overflow-hidden position-relative">
+  <!-- Video Background (only in hero section) -->
+  <div class="position-absolute w-100 h-100 top-0 start-0 z-0">
+    <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover; filter: brightness(1.1) contrast(1.1) saturate(1.1);">
+      <source src="../images/White_Network.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="position-absolute w-100 h-100 top-0 start-0" style="background: rgba(0, 0, 0, 0.15);"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="container position-relative z-1">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <div class="p-4 mx-auto text-center" style="max-width: 800px;">
+          <h1 class="display-1 fw-bold mb-4 text-dark">JenX</h1>
+          <p class="fs-4 lh-lg mb-5 text-dark" style="max-width: 590px; margin: 0 auto 2.5rem;">
+            👋 Hi! I'm <strong class="text-primary">Jensen</strong>, a <strong class="text-primary">Web Designer &amp; Developer</strong> passionate
+            about crafting beautiful, responsive websites. I specialize in
+            translating client visions into intuitive digital experiences
+            from pixel-perfect layouts to seamless mobile responsiveness. Proficient
+            in HTML, CSS, JavaScript, and Bootstrap, Let's collaborate to bring
+            your online presence to life! 💻✨
+          </p>
+          <div class="mt-5">
+            <a href="#contact" class="btn btn-dark btn-lg px-5 py-3 fw-medium text-white transition-all">
+              Contact Me!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     3. ABOUT SECTION
+     ================================================= -->
+<style>
+  /* About Section with Bootstrap-only Background */
+  #about {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  #about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 80% 70%, rgba(46, 204, 113, 0.1) 0%, transparent 25%);
+    z-index: 0;
+  }
+  
+  #about .card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  }
+  
+  #about .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  #about .card-body {
+    padding: 2.5rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    margin: 5px;
+  }
+  
+  #about .card-title {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #about .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+  }
+  
+  #about .card-text {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #about h5 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 1.8rem 0 1rem;
+    font-size: 1.3rem;
+  }
+  
+  #about ul {
+    padding-left: 1.2rem;
+  }
+  
+  #about ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.6;
+    position: relative;
+  }
+  
+  #about ul li::before {
+    content: '▹';
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  #about .btn-primary {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    border: none;
+    padding: 0.6rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  #about .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  }
+  
+  #about hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ddd, transparent);
+    margin: 2rem 0;
+  }
+</style>
+
+<style>
+  #about {
+    position: relative;
+    padding: 6rem 0;
+    background: url('../images/AboutBack.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(1.1) contrast(1.1) saturate(1.2);
+    color: #333;
+  }
+  
+  #about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+    backdrop-filter: blur(1px);
+  }
+  
+  #about .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #about .card {
+    background: #ffffff;
+    border: 2px solid #d0d0d0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #about .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  #about .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+  }
+  
+  #about .card:hover::before {
+    opacity: 1;
+  }
+  
+  #about .card-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  #about .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: #3498db;
+  }
+  
+  #about .card-text {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  #about .btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+  }
+  
+  #about .btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-4 p-lg-5">
+            <h2 class="card-title text-center mb-4 display-5 fw-bold">About Me</h2>
+            <p class="card-text lead lh-lg mb-4">
+              I’m a computer science student at INTI International College Subang Jaya, pursuing a diploma with a focus
+              on data science. I have a strong interest in data analysis and visualisation, and I’m skilled in HTML,
+              CSS, JavaScript, PHP, C++, Java, Python. I’m currently seeking an internship to gain practical experience
+              in data science and work on projects that solve real-world problems. I enjoy traveling and playing golf
+              I like activities that teach me patience and broaden my perspectives. As a team leader in my studies, I
+              have developed strong problem-solving and critical-thinking skills. I’m excited to connect with others
+              and explore new opportunities in the tech field!
+            </p>
+            <div class="text-center">
+              <a href="html_code/About.html" target="_blank" class="btn btn-primary btn-lg px-4 py-2 mt-3">
+                <i class="bi bi-file-earmark-person me-2"></i>View Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Testimonials Section with Project Background */
+  #testimonial {
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+    color: #333;
+  }
+  
+  .testimonials-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/Project.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+  
+  .testimonials-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* 70% white overlay for better readability */
+    z-index: 1;
+  }
+  
+  .testimonials-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Card styling for testimonials */
+  #testimonial .card {
+    background: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #testimonial .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials-parallax {
+      background-attachment: scroll;
+    }
+  }
+  
+  /* Projects Section with Parallax - White Theme */
+  #projects {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    padding: 6rem 0;
+  }
+  
+  .projects-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/Project.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 0.15; /* Very light overlay */
+  }
+  
+  /* Keep necessary custom styles for parallax effect */
+  @media (max-width: 768px) {
+    #projects .projects-parallax {
+      background-attachment: scroll;
+    }
+  }
+</style>
+
+<!-- =================================================
+     4. PROJECTS SECTION
+     ================================================= -->
+<section id="projects" class="position-relative">
+  <div class="projects-parallax"></div>
+  <div class="position-relative z-1">
+    <div class="container">
+    <div class="text-center mb-5">
+      <h2>My Projects</h2>
+      <p class="text-muted">A showcase of my recent work</p>
+    </div>
+
+    <!-- Project #1 -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <!-- Carousel for Project #1 Screenshots -->
+              <div id="carouselProject1" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-indicators mb-0">
+                  <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner h-100 rounded-start">
+                  <div class="carousel-item h-100 active">
+                    <div class="d-flex align-items-center h-100">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Hard mode.png">
+  <img src="../images/Projects/Hard mode.png" class="img-fluid d-block mx-auto" alt="Project 1 Screenshot 1" style="cursor: zoom-in;">
+</a>
+                    </div>
+                  </div>
+                  <div class="carousel-item h-100">
+                    <div class="d-flex align-items-center h-100">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Flip Cards.png">
+  <img src="../images/Projects/Flip Cards.png" class="img-fluid d-block mx-auto" alt="Project 1 Screenshot 2" style="cursor: zoom-in;">
+</a>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-7 d-flex">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3"><a href="html_code/Project1.html" class="text-decoration-none">Project One: Memory Game with 3D Flip Animations</a></h5>
+                <div class="card-text mb-3">
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-1">Description:</h6>
+                    <p class="mb-0">A classic Memory (Concentration) card-matching game enhanced with smooth 3D flip animations, sound effects, and a timer/move counter system.</p>
+                  </div>
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-2">Technologies Used:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">HTML5</span>
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">CSS3</span>
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">JavaScript</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">GSAP 3</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Tailwind CSS</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Howler.js</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3">
+                  <a href="html_code/Project1.html" class="btn btn-outline-primary btn-sm me-2">View Project</a>
+                  <a href="http://memorygame.wuaze.com" class="btn btn-primary me-2" target="_blank">
+                    <i class="bi bi-play-circle me-1"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/JensenJianxi/MemoryGame" class="btn btn-outline-secondary" target="_blank">
+                    <i class="bi bi-github me-1"></i> Code Repository
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project #2 -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <div id="carouselProject2" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-indicators mb-0">
+                  <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner h-100 rounded-start">
+                  <div class="carousel-item h-100 active">
+                    <div class="d-flex align-items-center h-100">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus1.png">
+  <img src="../images/Projects/Focus1.png" class="img-fluid d-block mx-auto w-100" alt="Focus App Screenshot 1" style="cursor: zoom-in; object-fit: contain; max-height: 300px;">
+</a>
+                    </div>
+                  </div>
+                  <div class="carousel-item h-100">
+                    <div class="d-flex align-items-center h-100">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Focus2.png">
+  <img src="../images/Projects/Focus2.png" class="img-fluid d-block mx-auto w-100" alt="Focus App Screenshot 2" style="cursor: zoom-in; object-fit: contain; max-height: 300px;">
+</a>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-7 d-flex">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3"><a href="html_code/Project2.html" class="text-decoration-none">Project Two: Focus - Ambient Background with Clock</a></h5>
+                <div class="card-text mb-3">
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-1">Description:</h6>
+                    <p class="mb-0">A Focus page with fullscreen background videos, ambient sounds, and a large clock display designed to enhance concentration and productivity.</p>
+                  </div>
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-2">Technologies Used:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">HTML5</span>
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">CSS3</span>
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">JavaScript</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Local Storage</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Responsive Design</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3">
+                  <a href="html_code/Project2.html" class="btn btn-outline-primary btn-sm me-2">View Project</a>
+                  <a href="http://focusing.wuaze.com/?i=1" class="btn btn-primary me-2" target="_blank">
+                    <i class="bi bi-play-circle me-1"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/JensenJianxi/Focus" class="btn btn-outline-secondary" target="_blank">
+                    <i class="bi bi-github me-1"></i> Code Repository
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project #3 -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <div id="carouselProject3" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-indicators mb-0">
+                  <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner h-100 rounded-start">
+                  <div class="carousel-item h-100 active">
+                    <div class="d-flex align-items-center h-100">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Customer1.png">
+                        <img src="../images/Projects/Customer1.png" class="img-fluid d-block mx-auto w-100" alt="Customer 1" style="cursor: zoom-in; object-fit: contain; max-height: 300px;">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item h-100">
+                    <div class="d-flex align-items-center h-100">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="../images/Projects/Customer5.png">
+                        <img src="../images/Projects/Customer5.png" class="img-fluid d-block mx-auto w-100" alt="Customer 5" style="cursor: zoom-in; object-fit: contain; max-height: 300px;">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-7 d-flex">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3"><a href="html_code/Project3.html" class="text-decoration-none">Project Three: L&L ASIA Corporate Website</a></h5>
+                <div class="card-text mb-3">
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-1">Description:</h6>
+                    <p class="mb-0">L&L ASIA is a moneylender company approved by the Ministry of Housing & Local Government under the Money Lender Act 1951. The website showcases their loan services and provides a platform for potential clients to apply for loans.</p>
+                  </div>
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-2">Technologies Used:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">HTML5</span>
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">CSS3</span>
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">JavaScript</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Font Awesome</span>
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Responsive Design</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3">
+                  <a href="html_code/Project3.html" class="btn btn-outline-primary btn-sm">View Project</a>
+                  <a href="https://llasia.com.my" class="btn btn-primary me-2" target="_blank">
+                    <i class="bi bi-play-circle me-1"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section with Parallax -->
+<section id="testimonial" class="position-relative">
+  <div class="testimonials-parallax"></div>
+  <div class="testimonials-overlay"></div>
+  <div class="testimonials-content py-7">
+    <div class="container px-lg-5">
+      <h2 class="text-center mb-5 fw-bold display-5">TESTIMONIALS</h2>
+      <div class="row g-4">
+      <!-- Testimonial 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-1 border-light shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="text-center mb-3">
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
+            </div>
+            <div class="position-relative flex-grow-1 d-flex flex-column">
+              <p class="testimonial-quote">
+                <span class="testimonial-quote-mark top">"</span>
+                <span class="d-inline-block px-4">Jensen is a results-driven IT professional who installed and configured five CCTV systems, 
+                  a POS system, and a Wi-Fi network, provided ongoing technical support, and cut system downtime by 15%.</span>
+                <span class="testimonial-quote-mark bottom">"</span>
+              </p>
+            </div>
+            <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Jessy<br><small class="text-muted">Fatgirlbbq Manager</small></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-1 border-light shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="text-center mb-3">
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
+            </div>
+            <div class="position-relative flex-grow-1 d-flex flex-column">
+              <p class="testimonial-quote">
+                <span class="testimonial-quote-mark top">"</span>
+                <span class="d-inline-block px-4">Jensen drives project success by setting up systems, mapping networks, maintaining servers, 
+                  and troubleshooting intercommunications, while also managing data backups, optimizing operations with custom scripts, 
+                  and ensuring specialized systems run at peak performance.</span>
+                <span class="testimonial-quote-mark bottom">"</span>
+              </p>
+            </div>
+            <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Ilham<br><small class="text-muted">Yokogawa Supervisor</small></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-1 border-light shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            <div class="text-center mb-3">
+              <div class="mb-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
+            </div>
+            <div class="position-relative flex-grow-1 d-flex flex-column">
+              <p class="testimonial-quote">
+                <span class="testimonial-quote-mark top">"</span>
+                <span class="d-inline-block px-4">Jensen handles end-to-end residential and commercial property sales and leasing, 
+                  providing personalized guidance to ensure smooth, successful transactions and client satisfaction.</span>
+                <span class="testimonial-quote-mark bottom">"</span>
+              </p>
+            </div>
+            <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Jason<br><small class="text-muted">The Roof Manager</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     6. CONTACT SECTION
+     ================================================= -->
+<style>
+  /* Testimonial Styles */
+  .testimonial-quote {
+    position: relative;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .testimonial-quote-mark {
+    position: absolute;
+    color: var(--bs-primary);
+    opacity: 0.75;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+  
+  .testimonial-quote-mark.top {
+    top: 0;
+    left: 0;
+  }
+  
+  .testimonial-quote-mark.bottom {
+    bottom: 0;
+    right: 0;
+    line-height: 0.5;
+  }
+  
+  .hover-shadow {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+  }
+  
+  .hover-shadow:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.08) !important;
+    border-color: var(--bs-primary);
+  }
+
+  #contact {
+    position: relative;
+    padding: 6rem 0;
+    background: url('../images/Contact.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  #contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 0;
+  }
+  
+  .contact-info {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2.5rem;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-method i {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  #contact .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #contact .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+  }
+  
+  #contact h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  #contact .text-muted {
+    color: #6c757d !important;
+  }
+</style>
+
+<section id="contact">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <h2 class="display-4 fw-bold">Get In Touch</h2>
+        <p class="lead text-muted">Have a question or want to work together? Reach out to me!</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Contact Info Column -->
+      <div class="col-lg-5">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          
+          <div class="contact-method">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h5 class="mb-1">Location</h5>
+              <p class="mb-0">3, Jalan SS 15/8, Ss 15, 47500 Subang Jaya, Selangor</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h5 class="mb-1">Email Me</h5>
+              <p class="mb-0">
+                <a href="mailto:J23040078@student.newinti.edu.my" class="text-decoration-none">J23040078@student.newinti.edu.my</a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <i class="bi bi-phone"></i>
+            <div>
+              <h5 class="mb-1">Call Me</h5>
+              <p class="mb-0">+60 16-735 7678</p>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <h5>Follow Me</h5>
+            <div class="social-links d-flex gap-3">
+              <a href="https://www.linkedin.com/in/jensen-jianxi-43a377329/" target="_blank" title="LinkedIn" class="d-inline-flex align-items-center justify-content-center rounded-circle overflow-hidden" style="width: 40px; height: 40px; border: 2px solid var(--bs-primary);">
+                <img src="../images/LinkedIn.jpg" alt="LinkedIn" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </a>
+              <a href="https://github.com/JensenJianxi" target="_blank" title="GitHub" class="d-inline-flex align-items-center justify-content-center rounded-circle overflow-hidden" style="width: 40px; height: 40px; border: 2px solid var(--bs-primary);">
+                <img src="../images/Github.jpg" alt="GitHub" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </a>
+              <a href="https://medium.com/@j23040078" target="_blank" title="Blog" class="d-inline-flex align-items-center justify-content-center rounded-circle overflow-hidden" style="width: 40px; height: 40px; border: 2px solid var(--bs-primary);">
+                <img src="../images/Medium.jpg" alt="Medium Blog" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </a>
+            </div>
+          </div>
+          
+          <div class="mt-4 pt-3 border-top">
+            <p class="small text-muted mb-0">
+              <i class="bi bi-clock me-2"></i>Response Time: Usually within 24 hours
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form Column -->
+      <div class="col-lg-7">
+        <div class="card p-4 p-lg-5 h-100">
+          <h3 class="mb-4">Send Me a Message</h3>
+          <form id="contactForm" class="needs-validation" method="post" action="contact.php" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name" class="form-label">
+                    Full Name <span class="text-danger">*</span>
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="name"
+                      name="name"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter your name.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" class="form-label">
+                    Email <span class="text-danger">*</span>
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      id="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="subject" class="form-label">
+                    Subject
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-chat-square-text"></i></span>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="subject"
+                      name="subject"
+                      placeholder="What's this about?"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="message" class="form-label">
+                    Your Message <span class="text-danger">*</span>
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-pencil"></i></span>
+                    <textarea
+                      class="form-control form-control-lg"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="How can I help you?"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter your message.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 text-center mt-3">
+                <button type="submit" class="btn btn-primary btn-lg px-5">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Form validation
+(function () {
+  'use strict'
+  
+  // Fetch the form we want to apply custom Bootstrap validation styles to
+  const form = document.getElementById('contactForm')
+  
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+    
+    form.classList.add('was-validated')
+  }, false)
+  
+  // Email validation
+  const email = document.getElementById('email')
+  email.addEventListener('input', function (event) {
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity('Please enter a valid email address')
+    } else {
+      email.setCustomValidity('')
+    }
+  })
+  
+  // Show success message on form submission
+  form.addEventListener('submit', function(e) {
+    if (form.checkValidity()) {
+      e.preventDefault()
+      // Here you would typically submit the form via AJAX
+      alert('Thank you for your message! I will get back to you soon.')
+      form.reset()
+      form.classList.remove('was-validated')
+    }
+  })
+})()
+</script>
+
+
+<!-- Footer -->
+<footer class="bg-light py-4 mt-auto">
+  <div class="container text-center">
+    <small>&copy; 2025 Chen Jian Xi. All Rights Reserved.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle (Popper included) -->
+<script src="../Boostrap_js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="../js_code/script.js"></script>
+
+<!-- Client‐side Validation Script -->
+<script>
+  (function () {
+    'use strict';
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+              'submit',
+              function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              },
+              false
+      );
+    });
+  })();
+</script>
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","ms","zh-CN"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"bottom","alt_flags":{"en":"usa"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-0">
+          <img id="modalImage" src="" class="img-fluid" alt="Zoomed Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Image zoom functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var imageModal = document.getElementById('imageModal');
+      if (imageModal) {
+        imageModal.addEventListener('show.bs.modal', function(event) {
+          var button = event.relatedTarget;
+          var imageSrc = button.getAttribute('data-img');
+          var modalImage = imageModal.querySelector('#modalImage');
+          modalImage.src = imageSrc;
+        });
+      }
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume - JenX</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    /* Custom styles that can't be replaced by Bootstrap */
+    .resume-container {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      box-shadow: 0 10px 30px rgba(41, 128, 185, 0.15);
+      border: 1px solid rgba(52, 152, 219, 0.1);
+    }
+    
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: #e74c3c;
+    }
+    
+    .skill-tag {
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3) !important;
+    }
+    
+    .pdf-container {
+      height: 800px;
+    }
+    
+    @media print {
+      .resume-container {
+        box-shadow: none;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <div class="resume-container p-4 p-lg-5 my-4">
+      <!-- PDF Viewer Section -->
+      <div class="card shadow-sm mb-5">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h3 class="h5 mb-0">My Resume</h3>
+          <a href="https://drive.google.com/file/d/1DEbs1XSJzbJX54SlN2EJiejmgyAT9LtA/view?usp=sharing" target="_blank" class="btn btn-sm btn-light">
+            <i class="bi bi-download me-1"></i> Download
+          </a>
+        </div>
+        <div class="card-body p-0">
+          <div class="ratio ratio-16x9">
+            <embed src="../images/Resume.pdf" type="application/pdf" class="w-100 h-100" />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Header -->
+      <header class="text-center mb-4 pb-3 border-bottom">
+        <h1 class="display-5 fw-bold text-dark mb-2">Chen Jian Xi</h1>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+          <span class="text-muted">
+            <i class="bi bi-envelope-fill text-danger me-1"></i> J23040078@student.newinti.edu.my
+          </span>
+          <span class="text-muted">
+            <i class="bi bi-telephone-fill text-danger me-1"></i> 016-735 7678
+          </span>
+          <span class="text-muted">
+            <i class="bi bi-geo-alt-fill text-danger me-1"></i> Subang Jaya, Malaysia
+          </span>
+        </div>
+        <div class="d-print-none">
+          <a href="index.html" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-arrow-left me-1"></i> Back to Portfolio
+          </a>
+          <button onclick="window.print()" class="btn btn-outline-secondary btn-sm ms-2">
+            <i class="bi bi-printer me-1"></i> Print Resume
+          </button>
+        </div>
+      </header>
+
+      <!-- Summary -->
+      <section class="mb-5">
+        <h2 class="section-title text-uppercase fw-bold text-dark border-bottom border-3 border-primary pb-2 d-inline-block">
+          Professional Summary
+        </h2>
+        <p class="lead mb-0">
+          Computer Science student with solid skills in software development, algorithms, and data structures. 
+          Experienced in Networking, C++, and UX Design, seeking opportunities to apply technical knowledge 
+          in practical settings and contribute to innovative projects.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section class="mb-5">
+        <h2 class="section-title text-uppercase fw-bold text-dark border-bottom border-3 border-primary pb-2 d-inline-block">
+          Education
+        </h2>
+        <div class="card border-0 bg-light p-4 mb-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
+            <h3 class="h4 fw-bold text-dark mb-2 mb-md-0">Diploma in Computer Science</h3>
+            <span class="badge bg-light text-dark border px-3 py-2 fs-6">2023 - Present</span>
+          </div>
+          <h4 class="h5 text-danger fw-semibold mb-4">INTI International College Subang Jaya</h4>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2 lead"><i class="bi bi-check-circle-fill text-success me-2"></i> Current CGPA: 3.52</li>
+            <li class="mb-2 lead"><i class="bi bi-people-fill text-primary me-2"></i> Active member of Chinese Cultural Society</li>
+            <li class="mb-0 lead"><i class="bi bi-code-slash text-info me-2"></i> Focus on software development and system design</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="mb-5">
+        <h2 class="section-title text-uppercase fw-bold text-dark border-bottom border-3 border-primary pb-2 d-inline-block">
+          Technical Skills
+        </h2>
+        <div class="d-flex flex-wrap gap-3">
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">C++</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">Java</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">Python</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">HTML5/CSS3</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">JavaScript</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">Networking</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">UX/UI Design</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">Data Structures</span>
+          <span class="skill-tag badge rounded-pill px-4 py-2 mb-2 fs-5">Algorithms</span>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-5">
+        <h2 class="section-title text-uppercase fw-bold text-dark border-bottom border-3 border-primary pb-2 d-inline-block">
+          Projects
+        </h2>
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body">
+            <h3 class="h4 fw-bold text-dark mb-4">Academic Projects</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3 lead"><i class="bi bi-check-circle text-success me-2"></i> Developed various applications using C++ and Java during coursework</li>
+              <li class="mb-3 lead"><i class="bi bi-check-circle text-success me-2"></i> Designed and implemented algorithms for data processing</li>
+              <li class="mb-0 lead"><i class="bi bi-check-circle text-success me-2"></i> Created user interfaces with focus on user experience</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h3 class="h4 fw-bold text-dark mb-4">Portfolio Website</h3>
+            <p class="lead mb-0">
+              <i class="bi bi-check-circle text-success me-2"></i> Designed and developed a responsive portfolio website using HTML, CSS, and Bootstrap.
+              Implemented modern UI/UX principles and ensured cross-browser compatibility.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hobbies -->
+      <section class="mb-4">
+        <h2 class="section-title text-uppercase fw-bold text-dark border-bottom border-3 border-primary pb-2 d-inline-block">
+          Hobbies &amp; Interests
+        </h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="h-100 d-flex align-items-center p-4 bg-light rounded-3">
+              <i class="bi bi-search text-primary fs-2 me-3 flex-shrink-0"></i>
+              <span class="fs-5">Exploring new technologies</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="h-100 d-flex align-items-center p-4 bg-light rounded-3">
+              <i class="bi bi-code-square text-primary fs-2 me-3 flex-shrink-0"></i>
+              <span class="fs-5">Coding challenges</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="h-100 d-flex align-items-center p-4 bg-light rounded-3">
+              <i class="bi bi-people-fill text-primary fs-2 me-3 flex-shrink-0"></i>
+              <span class="fs-5">Tech workshops</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="h-100 d-flex align-items-center p-4 bg-light rounded-3">
+              <i class="bi bi-github text-primary fs-2 me-3 flex-shrink-0"></i>
+              <span class="fs-5">Open-source contributions</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="h-100 d-flex align-items-center p-4 bg-light rounded-3">
+              <i class="bi bi-book text-primary fs-2 me-3 flex-shrink-0"></i>
+              <span class="fs-5">Reading tech articles</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Scripts -->
+  <script>
+    // Enable tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+</html>
