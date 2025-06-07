@@ -41,17 +41,7 @@
       box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3) !important;
     }
     
-    .pdf-container {
-      height: 800px;
-    }
-    
-    /* Make PDF taller on mobile */
-    @media (max-width: 768px) {
-      .ratio-16x9 {
-        --bs-aspect-ratio: 200%; /* Makes it twice as tall as wide */
-        min-height: 80vh; /* Takes up 80% of viewport height */
-      }
-    }
+    /* PDF container will use Bootstrap's responsive utilities */
     
     @media print {
       .resume-container {
@@ -73,8 +63,8 @@
           </a>
         </div>
         <div class="card-body p-0">
-          <div class="ratio ratio-16x9" style="min-height: 600px;">
-            <embed src="../images/Resume.pdf" type="application/pdf" class="w-100 h-100" />
+          <div class="ratio ratio-16x9 ratio-lg-16x9 ratio-md-4x3 ratio-sm-1x1 min-vh-50 min-vh-md-75">
+            <embed src="../images/Resume.pdf" type="application/pdf" class="w-100 h-100" style="min-height: 70vh;" />
           </div>
         </div>
       </div>
