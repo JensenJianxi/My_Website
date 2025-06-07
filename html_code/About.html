@@ -45,6 +45,14 @@
       height: 800px;
     }
     
+    /* Make PDF taller on mobile */
+    @media (max-width: 768px) {
+      .ratio-16x9 {
+        --bs-aspect-ratio: 200%; /* Makes it twice as tall as wide */
+        min-height: 80vh; /* Takes up 80% of viewport height */
+      }
+    }
+    
     @media print {
       .resume-container {
         box-shadow: none;
@@ -65,7 +73,7 @@
           </a>
         </div>
         <div class="card-body p-0">
-          <div class="ratio ratio-16x9">
+          <div class="ratio ratio-16x9" style="min-height: 600px;">
             <embed src="../images/Resume.pdf" type="application/pdf" class="w-100 h-100" />
           </div>
         </div>
