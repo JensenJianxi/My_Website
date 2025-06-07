@@ -41,7 +41,11 @@
       box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3) !important;
     }
     
-    /* PDF container will use Bootstrap's responsive utilities */
+    /* PDF container with responsive height */
+    .pdf-viewer-container {
+      min-height: 80vh;
+      height: 100%;
+    }
     
     @media print {
       .resume-container {
@@ -63,8 +67,8 @@
           </a>
         </div>
         <div class="card-body p-0">
-          <div class="ratio ratio-16x9 ratio-lg-16x9 ratio-md-4x3 ratio-sm-1x1 min-vh-50 min-vh-md-75">
-            <embed src="../images/Resume.pdf" type="application/pdf" class="w-100 h-100" style="min-height: 70vh;" />
+          <div class="pdf-viewer-container">
+            <embed src="../images/Resume.pdf" type="application/pdf" class="w-100 h-100" style="min-height: 80vh;" />
           </div>
         </div>
       </div>
