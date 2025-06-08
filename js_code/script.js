@@ -1,14 +1,14 @@
-// script.js
+//script.js
 
-// 1) Project filtering
+//project filtering
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function () {
-        // toggle active state
+        //toggle active state
         document.querySelectorAll('.filter-btn')
             .forEach(b => b.classList.remove('active'));
         this.classList.add('active');
 
-        const filter = this.dataset.filter; // "all", "web", "ui", "app"
+        const filter = this.dataset.filter;
         document.querySelectorAll('.project-item').forEach(item => {
             if (filter === 'all' || item.dataset.category === filter) {
                 item.style.display = '';
@@ -19,7 +19,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
-// 2) Contact form simple validation
+//contact form validation
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', evt => {
@@ -36,7 +36,7 @@ if (contactForm) {
     
 }
 
-// 3) Blog post scroll-reveal
+//blog post scroll-reveal
 document.addEventListener('scroll', () => {
     document.querySelectorAll('#blog article').forEach(article => {
         const top = article.getBoundingClientRect().top;
