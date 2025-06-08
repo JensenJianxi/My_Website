@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chen Jian Xi | Portfolio</title>
 
-  <!-- Bootstrap 5 CSS (Local) -->
+  <!--Bootstrap 5 CSS (Locally)-->
   <link href="../Boostrap_css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
-    /* Video Background Styles */
+    /*Video Background*/
     .z-index-1 {
       position: relative;
       z-index: 1;
     }
     
-    /* Ensure the video container takes full viewport height */
+    /*Ensure full viewport height*/
     #hero {
       position: relative;
       overflow: hidden;
     }
     
-    /* Video background styling */
+    /*Video background*/
     .video-background {
       position: absolute;
       top: 0;
@@ -31,7 +31,7 @@
       z-index: -1;
     }
     
-    /* Ensure the video covers the entire container */
+    /*Ensure entire container*/
     .video-background video {
       min-width: 100%;
       min-height: 100%;
@@ -43,7 +43,7 @@
       object-fit: cover;
     }
     
-    /* Responsive adjustments */
+    /*Responsive adjustments*/
     @media (max-width: 768px) {
       #hero h1 {
         font-size: 3rem !important;
@@ -53,7 +53,7 @@
       }
     }
 
-    /* Navigation Styles */
+    /*Navigation Styles*/
     .nav-jenx {
       font-size: 1.8rem !important;
       font-weight: 700;
@@ -76,7 +76,7 @@
       gap: 0.5rem;
     }
 
-    /* Style for the language switcher */
+    /*Language switcher*/
     .gtranslate_wrapper {
       display: flex;
       align-items: center;
@@ -84,30 +84,30 @@
       margin-right: 1rem;
     }
     
-    /* Adjust navbar padding and height */
+    /*Adjust navbar padding and height*/
     #mainNavbar {
-      min-height: 90px; /* Increased navbar height */
-      font-size: 1.1rem; /* Slightly larger font size */
+      min-height: 90px;
+      font-size: 1.1rem; 
     }
     
-    /* Adjust navbar container and items alignment */
+    /*navbar container and items*/
     #mainNavbar > .container {
       height: 100%;
       display: flex;
       align-items: flex-start;
-      padding-top: 5px;  /* Reduced from 15px to 5px to lift the navbar */
+      padding-top: 5px;
     }
     
-    /* Adjust navbar items vertical alignment */
+    /*navbar items*/
     .navbar-nav {
       align-items: center;
       height: 100%;
       margin-top: 0;
       margin-bottom: 0;
-      margin-right: auto; /* Push the nav items to the left */
+      margin-right: auto;
     }
     
-    /* Position the search form 200px from the right */
+    /*search form*/
     #mainNavbar .d-flex[role="search"] {
       position: absolute;
       right: 180px;
@@ -116,59 +116,57 @@
       margin: 0;
     }
     
-    /* Ensure nav links are properly aligned */
+    /*nav links*/
     .nav-link {
       display: flex;
       align-items: center;
       height: 100%;
-      padding: 0 1.2rem; /* Increased horizontal padding */
-      font-size: 1.1rem; /* Slightly larger font size */
+      padding: 0 1.2rem;
+      font-size: 1.1rem;
     }
     
-    /* Make the JenX text larger */
+    /*JenX text*/
     .nav-jenx {
-      font-size: 1.4rem !important; /* Larger JenX text */
+      font-size: 1.4rem !important;
     }
     
-    /* Adjust search bar size */
+    /*search bar size*/
     #mainNavbar .form-control {
-      font-size: 1.1rem; /* Larger search text */
-      height: 2.4rem; /* Taller search bar */
+      font-size: 1.1rem;
+      height: 2.4rem;
     }
     
-    /* Adjust search button size */
+    /*search button size*/
     #mainNavbar .btn {
-      height: 2.4rem; /* Match search bar height */
+      height: 2.4rem;
       padding: 0 1rem;
     }
     
-    /* Keep each section padded */
+    /*section padding*/
     section {
       padding: 4rem 0;
     }
     html {
-      scroll-behavior: smooth; /* enables smooth scrolling to anchors */
+      scroll-behavior: smooth;
     }
-    /* Since the header is fixed, give a spacer */
+    /*header spacer*/
     #header-spacer {
       height: 15px;
     }
-    /* “JenX” next to Home: larger font and bold */
+    /*JenX next to Home: larger font and bold*/
     .nav-jenx {
       font-family: clarendon-w01-medium-692107, clarendon-w02-medium-693834, serif;
       font-size: 1.25rem;
       font-weight: 700;
       margin-right: 0.5rem;
-      color: inherit;           /* inherit link color */
-      text-decoration: none;    /* remove underline */
+      color: inherit;
+      text-decoration: none;
     }
     .nav-jenx:hover {
       text-decoration: underline;
     }
 
-    /* ============================================
-       Animated Gradient Background Utility Class
-       ============================================ */
+    /*Animated Gradient Background*/
     @keyframes gradientShift {
       0% {
         background-position: 0% 50%;
@@ -181,19 +179,19 @@
       }
     }
     .bg-animated {
-      /* Make the section at least 60% of the viewport height */
+      /*section height*/
       min-height: 60vh;
 
-      /* Center its contents vertically */
+      /*Center contents vertically*/
       display: flex;
       align-items: center;
       
-      /* Background color */
+      /*Background color*/
       background-color: #5fb4f4;
       background-size: cover;
       background-position: center;
 
-      /* Ensure text remains white */
+      /*Ensure text remains white*/
       color: #fff !important;
     }
   </style>
@@ -205,15 +203,13 @@
         data-bs-target="#mainNavbar"
         data-bs-offset="75"
 >
-<!-- ============================================
-     1. HEADER (Top Branding Bar + Fixed Navbar)
-     ============================================ -->
+<!--HEADER-->
 <header>
 
-  <!-- Bottom Navigation Bar (fixed-top) -->
+  <!--Bottom Navigation Bar-->
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <!-- Navbar toggler for mobile -->
+      <!--Navbar for mobile-->
       <button
               class="navbar-toggler"
               type="button"
@@ -227,7 +223,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- Left-aligned menu items -->
+        <!--Left menu items-->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item d-flex align-items-center">
             <a class="nav-jenx" href="#hero">JenX</a>
@@ -249,21 +245,19 @@
           </li>
         </ul>
         
-        <!-- Language switcher -->
+        <!--Language switcher-->
         <div class="gtranslate_wrapper"></div>
       </div>
     </div>
   </nav>
 </header>
 
-<!-- Spacer so the fixed-top navbar does not overlap content -->
+<!--Spacer ensure fixed-top navbar dont overlap-->
 <div id="header-spacer"></div>
 
-<!-- =================================================
-     2. INTRODUCTION SECTION (Hero)
-     ================================================= -->
+<!--Introduction Section (Hero)-->
 <section id="hero" class="min-vh-100 d-flex align-items-center overflow-hidden position-relative">
-  <!-- Video Background (only in hero section) -->
+  <!--Video Background-->
   <div class="position-absolute w-100 h-100 top-0 start-0 z-0">
     <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: cover; filter: brightness(1.1) contrast(1.1) saturate(1.1);">
       <source src="../images/White_Network.mp4" type="video/mp4">
@@ -272,7 +266,7 @@
     <div class="position-absolute w-100 h-100 top-0 start-0" style="background: rgba(0, 0, 0, 0.15);"></div>
   </div>
   
-  <!-- Content -->
+  <!--Content-->
   <div class="container position-relative z-1">
     <div class="row justify-content-center">
       <div class="col-12 text-center">
@@ -297,11 +291,9 @@
   </div>
 </section>
 
-<!-- =================================================
-     3. ABOUT SECTION
-     ================================================= -->
+<!--About Section-->
 <style>
-  /* About Section with Bootstrap-only Background */
+  /*About Section with Bootstrap Background*/
   #about {
     position: relative;
     overflow: hidden;
@@ -557,7 +549,7 @@
 </section>
 
 <style>
-  /* Testimonials Section with Project Background */
+  /*Testimonials Section with Project Background*/
   #testimonial {
     position: relative;
     overflow: hidden;
@@ -583,7 +575,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.7); /* 70% white overlay for better readability */
+    background: rgba(255, 255, 255, 0.7); 
     z-index: 1;
   }
   
@@ -592,7 +584,7 @@
     z-index: 2;
   }
   
-  /* Card styling for testimonials */
+  /*Card styling*/
   #testimonial .card {
     background: rgba(255, 255, 255, 0.95);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -609,7 +601,7 @@
     }
   }
   
-  /* Projects Section with Parallax - White Theme */
+  /*Projects Section with Parallax*/
   #projects {
     position: relative;
     overflow: hidden;
@@ -627,10 +619,10 @@
     background-size: cover;
     background-attachment: fixed;
     z-index: 0;
-    opacity: 0.15; /* Very light overlay */
+    opacity: 0.15; 
   }
   
-  /* Keep necessary custom styles for parallax effect */
+  /*custom styles parallax*/
   @media (max-width: 768px) {
     #projects .projects-parallax {
       background-attachment: scroll;
@@ -638,9 +630,7 @@
   }
 </style>
 
-<!-- =================================================
-     4. PROJECTS SECTION
-     ================================================= -->
+<!--Projects Section-->
 <section id="projects" class="position-relative">
   <div class="projects-parallax"></div>
   <div class="position-relative z-1">
@@ -650,13 +640,13 @@
       <p class="text-muted">A showcase of my recent work</p>
     </div>
 
-    <!-- Project #1 -->
+    <!--Project One-->
     <div class="row mb-5">
       <div class="col-lg-8 mx-auto">
         <div class="card shadow-sm">
           <div class="row g-0">
             <div class="col-md-5">
-              <!-- Carousel for Project #1 Screenshots -->
+              <!--Carousel for Project One-->
               <div id="carouselProject1" class="carousel slide h-100" data-bs-ride="carousel">
                 <div class="carousel-indicators mb-0">
                   <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -724,7 +714,7 @@
       </div>
     </div>
 
-    <!-- Project #2 -->
+    <!--Project Two-->
     <div class="row mb-5">
       <div class="col-lg-8 mx-auto">
         <div class="card shadow-sm">
@@ -796,7 +786,7 @@
       </div>
     </div>
 
-    <!-- Project #3 -->
+    <!--Project Three-->
     <div class="row mb-5">
       <div class="col-lg-8 mx-auto">
         <div class="card shadow-sm">
@@ -867,7 +857,7 @@
   </div>
 </section>
 
-<!-- Testimonials Section with Parallax -->
+<!--Testimonials Section with Parallax-->
 <section id="testimonial" class="position-relative">
   <div class="testimonials-parallax"></div>
   <div class="testimonials-overlay"></div>
@@ -875,7 +865,7 @@
     <div class="container px-lg-5">
       <h2 class="text-center mb-5 fw-bold display-5">TESTIMONIALS</h2>
       <div class="row g-4">
-      <!-- Testimonial 1 -->
+      <!--Testimonial One-->
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-1 border-light shadow-sm">
           <div class="card-body d-flex flex-column p-4">
@@ -902,7 +892,7 @@
         </div>
       </div>
       
-      <!-- Testimonial 2 -->
+      <!--Testimonial Two-->
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-1 border-light shadow-sm">
           <div class="card-body d-flex flex-column p-4">
@@ -930,7 +920,7 @@
         </div>
       </div>
       
-      <!-- Testimonial 3 -->
+      <!--Testimonial Three-->
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-1 border-light shadow-sm">
           <div class="card-body d-flex flex-column p-4">
@@ -960,11 +950,9 @@
   </div>
 </section>
 
-<!-- =================================================
-     6. CONTACT SECTION
-     ================================================= -->
+<!--Contact Section-->
 <style>
-  /* Testimonial Styles */
+  /*Testimonial Styles*/
   .testimonial-quote {
     position: relative;
     font-style: italic;
@@ -1117,7 +1105,7 @@
     </div>
     
     <div class="row g-4">
-      <!-- Contact Info Column -->
+      <!--Contact Info Column-->
       <div class="col-lg-5">
         <div class="contact-info">
           <h3>Contact Information</h3>
@@ -1171,7 +1159,7 @@
         </div>
       </div>
       
-      <!-- Contact Form Column -->
+      <!--Contact Form Column-->
       <div class="col-lg-7">
         <div class="card p-4 p-lg-5 h-100">
           <h3 class="mb-4">Send Me a Message</h3>
@@ -1275,11 +1263,11 @@
 </section>
 
 <script>
-// Form validation
+//form validation
 (function () {
   'use strict'
   
-  // Fetch the form we want to apply custom Bootstrap validation styles to
+  //fetch the form we want to apply with Bootstrap validation styles
   const form = document.getElementById('contactForm')
   
   form.addEventListener('submit', function (event) {
@@ -1291,7 +1279,7 @@
     form.classList.add('was-validated')
   }, false)
   
-  // Email validation
+  //email validation
   const email = document.getElementById('email')
   email.addEventListener('input', function (event) {
     if (email.validity.typeMismatch) {
@@ -1301,11 +1289,10 @@
     }
   })
   
-  // Show success message on form submission
+  //show success message on form submission
   form.addEventListener('submit', function(e) {
     if (form.checkValidity()) {
       e.preventDefault()
-      // Here you would typically submit the form via AJAX
       alert('Thank you for your message! I will get back to you soon.')
       form.reset()
       form.classList.remove('was-validated')
@@ -1315,20 +1302,20 @@
 </script>
 
 
-<!-- Footer -->
+<!--footer-->
 <footer class="bg-light py-4 mt-auto">
   <div class="container text-center">
     <small>&copy; 2025 Chen Jian Xi. All Rights Reserved.</small>
   </div>
 </footer>
 
-<!-- Bootstrap JS Bundle (Popper included) -->
+<!--bootstrap JS-->
 <script src="../Boostrap_js/bootstrap.bundle.min.js"></script>
 
-<!-- Custom JavaScript -->
+<!--custom JavaScript-->
 <script src="../js_code/script.js"></script>
 
-<!-- Client‐side Validation Script -->
+<!--client-side validation-->
 <script>
   (function () {
     'use strict';
@@ -1352,7 +1339,7 @@
 <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","ms","zh-CN"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_vertical_position":"top","float_switcher_open_direction":"bottom","alt_flags":{"en":"usa"}}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
-  <!-- Image Modal -->
+<!--image modal-->
   <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
@@ -1366,8 +1353,8 @@
     </div>
   </div>
 
-  <script>
-    // Image zoom functionality
+<script>
+    //image zoom 
     document.addEventListener('DOMContentLoaded', function() {
       var imageModal = document.getElementById('imageModal');
       if (imageModal) {
@@ -1379,6 +1366,6 @@
         });
       }
     });
-  </script>
-  </body>
+</script>
+</body>
 </html>
