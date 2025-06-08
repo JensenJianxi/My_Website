@@ -34,7 +34,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!--navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-3 border-primary">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="../index.html">
@@ -52,7 +52,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!--hero section-->
     <header class="project-hero text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Focus - Ambient Background with Clock</h1>
@@ -61,11 +61,11 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!--main content-->
     <div class="container my-5">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <!-- Screenshot Carousel -->
+                <!--carousel-->
                 <div class="mb-5">
                     <div id="focusCarousel" class="carousel slide shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
 
-                <!-- Features -->
+                <!--features-->
                 <section class="mb-5">
                     <h2 class="mb-4">✨ Features</h2>
                     <div class="row">
@@ -198,7 +198,7 @@
                     </div>
                 </section>
 
-                <!-- How to Use -->
+                <!--how to use-->
                 <section class="mb-5">
                     <h2 class="mb-4">📋 How to Use</h2>
                     <ol class="list-group list-group-numbered">
@@ -211,7 +211,7 @@
                     </ol>
                 </section>
 
-                <!-- Tech Stack -->
+                <!--tech stack-->
                 <section class="mb-5">
                     <h2 class="mb-4">🛠️ Tech Stack</h2>
                     <div class="mb-4">
@@ -224,7 +224,7 @@
                     </div>
                 </section>
 
-                <!-- Development -->
+                <!--development-->
                 <section class="mb-5">
                     <h2 class="mb-4">💻 Development</h2>
                     <p>This project leverages modern web technologies to create a smooth and responsive experience:</p>
@@ -237,7 +237,7 @@
                     </ul>
                 </section>
 
-                <!-- License -->
+                <!--license-->
                 <section class="mb-5">
                     <h2 class="mb-4">📄 License</h2>
                     <p>Feel free to use and modify for your own projects!</p>
@@ -246,14 +246,14 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!--footer-->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p class="mb-0">© 2025 Chen Jian Xi. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Image Modal -->
+    <!--image model-->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content bg-transparent border-0">
@@ -275,7 +275,7 @@
         var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
         var modalImage = document.getElementById('modalImage');
         
-        // Handle image clicks in carousel
+        //direct click on iamge
         document.querySelectorAll('[data-bs-target="#imageModal"]').forEach(element => {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -284,8 +284,6 @@
                 imageModal.show();
             });
         });
-
-        // Handle direct clicks on carousel images
         document.querySelectorAll('.carousel-item img').forEach(img => {
             img.style.cursor = 'zoom-in';
             img.addEventListener('click', function(e) {
