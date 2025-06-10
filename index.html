@@ -857,94 +857,129 @@
   </div>
 </section>
 
-<!--Testimonials Section with Parallax-->
+<!--Testimonials Section with Carousel-->
 <section id="testimonial" class="position-relative">
   <div class="testimonials-parallax"></div>
   <div class="testimonials-overlay"></div>
   <div class="testimonials-content py-7">
     <div class="container px-lg-5">
       <h2 class="text-center mb-5 fw-bold display-5">TESTIMONIALS</h2>
-      <div class="row g-4">
-      <!--Testimonial One-->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-1 border-light shadow-sm">
-          <div class="card-body d-flex flex-column p-4">
-            <div class="text-center mb-3">
-              <div class="mb-2">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-              </div>
-              <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
-            </div>
-            <div class="position-relative flex-grow-1 d-flex flex-column">
-              <p class="testimonial-quote">
-                <span class="testimonial-quote-mark top">"</span>
-                <span class="d-inline-block px-4">Jensen is a results-driven IT professional who installed and configured five CCTV systems, 
-                  a POS system, and a Wi-Fi network, provided ongoing technical support, and cut system downtime by 15%.</span>
-                <span class="testimonial-quote-mark bottom">"</span>
-              </p>
-            </div>
-            <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Jessy<br><small class="text-muted">Fatgirlbbq Manager</small></div>
-          </div>
-        </div>
-      </div>
       
-      <!--Testimonial Two-->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-1 border-light shadow-sm">
-          <div class="card-body d-flex flex-column p-4">
-            <div class="text-center mb-3">
-              <div class="mb-2">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
+      <!-- Testimonials Carousel -->
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators mb-0">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <!-- Slides -->
+        <div class="carousel-inner pb-5">
+          <!-- Testimonial One -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="card h-100 border-1 border-light shadow-sm mx-auto" style="max-width: 600px;">
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="text-center mb-3">
+                      <div class="mb-2">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </div>
+                      <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
+                    </div>
+                    <div class="position-relative flex-grow-1 d-flex flex-column">
+                      <p class="testimonial-quote">
+                        <span class="testimonial-quote-mark top">"</span>
+                        <span class="d-inline-block px-4">Jensen is a results-driven IT professional who installed and configured five CCTV systems, 
+                          a POS system, and a Wi-Fi network, provided ongoing technical support, and cut system downtime by 15%.</span>
+                        <span class="testimonial-quote-mark bottom">"</span>
+                      </p>
+                    </div>
+                    <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Jessy<br><small class="text-muted">Fatgirlbbq Manager</small></div>
+                  </div>
+                </div>
               </div>
-              <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
             </div>
-            <div class="position-relative flex-grow-1 d-flex flex-column">
-              <p class="testimonial-quote">
-                <span class="testimonial-quote-mark top">"</span>
-                <span class="d-inline-block px-4">Jensen drives project success by setting up systems, mapping networks, maintaining servers, 
-                  and troubleshooting intercommunications, while also managing data backups, optimizing operations with custom scripts, 
-                  and ensuring specialized systems run at peak performance.</span>
-                <span class="testimonial-quote-mark bottom">"</span>
-              </p>
+          </div>
+          
+          <!-- Testimonial Two -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="card h-100 border-1 border-light shadow-sm mx-auto" style="max-width: 600px;">
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="text-center mb-3">
+                      <div class="mb-2">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </div>
+                      <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
+                    </div>
+                    <div class="position-relative flex-grow-1 d-flex flex-column">
+                      <p class="testimonial-quote">
+                        <span class="testimonial-quote-mark top">"</span>
+                        <span class="d-inline-block px-4">Jensen drives project success by setting up systems, mapping networks, maintaining servers, 
+                          and troubleshooting intercommunications, while also managing data backups, optimizing operations with custom scripts, 
+                          and ensuring specialized systems run at peak performance.</span>
+                        <span class="testimonial-quote-mark bottom">"</span>
+                      </p>
+                    </div>
+                    <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Ilham<br><small class="text-muted">Yokogawa Supervisor</small></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Ilham<br><small class="text-muted">Yokogawa Supervisor</small></div>
+          </div>
+          
+          <!-- Testimonial Three -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="card h-100 border-1 border-light shadow-sm mx-auto" style="max-width: 600px;">
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="text-center mb-3">
+                      <div class="mb-2">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </div>
+                      <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
+                    </div>
+                    <div class="position-relative flex-grow-1 d-flex flex-column">
+                      <p class="testimonial-quote">
+                        <span class="testimonial-quote-mark top">"</span>
+                        <span class="d-inline-block px-4">Jensen handles end-to-end residential and commercial property sales and leasing, 
+                          providing personalized guidance to ensure smooth, successful transactions and client satisfaction.</span>
+                        <span class="testimonial-quote-mark bottom">"</span>
+                      </p>
+                    </div>
+                    <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Jason<br><small class="text-muted">The Roof Manager</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <!--Testimonial Three-->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-1 border-light shadow-sm">
-          <div class="card-body d-flex flex-column p-4">
-            <div class="text-center mb-3">
-              <div class="mb-2">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-              </div>
-              <i class="bi bi-chat-quote-fill text-primary opacity-75 fs-1 mb-3"></i>
-            </div>
-            <div class="position-relative flex-grow-1 d-flex flex-column">
-              <p class="testimonial-quote">
-                <span class="testimonial-quote-mark top">"</span>
-                <span class="d-inline-block px-4">Jensen handles end-to-end residential and commercial property sales and leasing, 
-                  providing personalized guidance to ensure smooth, successful transactions and client satisfaction.</span>
-                <span class="testimonial-quote-mark bottom">"</span>
-              </p>
-            </div>
-            <div class="fw-bold text-dark mt-auto pt-3 border-top text-center">Jason<br><small class="text-muted">The Roof Manager</small></div>
-          </div>
-        </div>
+        
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </div>
